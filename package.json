@@ -1,0 +1,31 @@
+{
+  "name": "ga-tracker",
+  "version": "1.0.0",
+  "description": "A google analytics e-commerce wrapper for javascript",
+  "main": "dist/ga-source.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "node_modules/.bin/http-server demo & npm run development -- --watch",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^12.0.4",
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.5",
+    "browser-sync-webpack-plugin": "2.0.1",
+    "cross-env": "^5.2.0",
+    "http-server": "^0.11.1",
+    "laravel-mix": "^4.0.16",
+    "node-sass": "^4.12.0",
+    "resolve-url-loader": "2.3.1",
+    "sass-loader": "7.*",
+    "ts-loader": "^6.0.2",
+    "typescript": "^3.5.1",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
