@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>GA Track - E-Commerce</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-98212043-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-98212043-2');
+    </script>
+    <script src="/js/ga-tracker.js"></script>
+</head>
+<body class="bg-light">
+<main class="container">
+    <script>
+        var tracker = new GaTracker()
+        var collection = tracker.collection()
+    </script>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96"></rect>
+                    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
+                </svg>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="/gtag/product.html" class="btn btn-primary" onclick="collection.getProduct('P67890').click()">Go somewhere</a>
+                </div>
+            </div>
+            <script>
+                collection.addJson({
+                    "id": "P12345",
+                    "name": "Android Warhol T-Shirt",
+                    "list": "Search Results",
+                    "brand": "Google",
+                    "category": "Apparel/T-Shirts",
+                    "variant": "Black",
+                    "position": 1,
+                    "quantity": 2,
+                    "price": 2
+                })
+            </script>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96"></rect>
+                    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
+                </svg>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary" onclick="collection.getProduct('P67890').click()">Go somewhere</a>
+                </div>
+            </div>
+            <script>
+                collection.addJson({
+                    "id": "P67890",
+                    "name": "Flame challenge TShirt",
+                    "list": "Search Results",
+                    "brand": "MyBrand",
+                    "category": "Apparel/T-Shirts",
+                    "variant": "Red",
+                    "position": 2,
+                    "quantity": 1,
+                    "price": 3
+                })
+            </script>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96"></rect>
+                    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
+                </svg>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary" onclick="collection.getProduct('P67890').click()">Go somewhere</a>
+                </div>
+            </div>
+            <script>
+                collection.addJson({
+                    "id": "P67891",
+                    "name": "Uxiko TShirt",
+                    "list": "Search Results",
+                    "brand": "MyBrand",
+                    "category": "Apparel/T-Shirts",
+                    "variant": "Red",
+                    "position": 3,
+                    "quantity": 1,
+                    "price": 3
+                })
+            </script>
+        </div>
+    </div>
+    <script>
+        collection.impression()
+    </script>
+</main>
+</body>
+</html>
