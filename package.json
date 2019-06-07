@@ -1,6 +1,6 @@
 {
   "name": "ga-tracker",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A google analytics e-commerce wrapper for javascript",
   "main": "dist/ga-source.js",
   "scripts": {
