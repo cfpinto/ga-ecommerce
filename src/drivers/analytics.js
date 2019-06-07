@@ -1,3 +1,5 @@
+import chunk from '../helpers/chunk'
+
 export const TYPE = 'analytics'
 
 export default class UA {
@@ -33,11 +35,14 @@ export default class UA {
     }
 
     impression(items) {
-        items.map(item => {
-            ga('ec:addImpression', item)
+        chunk(10, items).map(list => {
+            list.map(item => {
+                ga('ec:addImpression', item)
+            })
+            
+            ga('ec:setAction', 'detail')
+            this.event('view_item_list')
         })
-        ga('ec:setAction', 'detail')
-        this.event('view_item_list')
     }
 
     clickItem(item) {
