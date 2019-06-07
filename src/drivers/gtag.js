@@ -1,3 +1,5 @@
+import chunk from '../helpers/chunk'
+
 export const TYPE = 'gtag'
 
 export default class Gtag {
@@ -28,7 +30,9 @@ export default class Gtag {
     }
 
     impression(items) {
-        gtag('event', 'view_item_list', { items })
+        chunk(10, items).map(list => {
+            gtag('event', 'view_item_list', { list })
+        })
     }
 
     clickItem(item) {
