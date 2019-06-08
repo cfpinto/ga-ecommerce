@@ -3,7 +3,7 @@ import Product from './product'
 import Cart from './cart'
 import Promotion from './promotion'
 import Checkout from './checkout'
-import Refund from './Refund'
+import Refund from './refund'
 import UA from './drivers/analytics'
 
 /**

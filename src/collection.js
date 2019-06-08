@@ -1,5 +1,5 @@
 import Product from './product'
-import Storage, {LIST_NAME_KEY} from './helpers/storage'
+import Storage, { LIST_NAME_KEY } from './helpers/storage'
 
 class Collection {
     /**
@@ -36,24 +36,34 @@ class Collection {
     }
 
     /**
+     * @throws {string}
+     * 
+     * @param {{}}item
+     */
+    addJson(item) {
+        if (item instanceof Product) {
+            throw "Invalid type, item must be simple object"
+        }
+        
+        this.addProduct(new Product(item, this.driver))
+    }
+
+    /**
      *
      * @param {Product}item
      */
-    addJson(item) {
-        if (!(item instanceof Product)) {
-            item = new Product(item, this.driver)
-        }
+    addProduct(item) {
 
         // Check that global list is already set. if not set it
         if (!this.listName && item.list) {
             this.setListName(item.list)
-            
+
         }
         // When global list is set override even if item has list
         else {
             item.list = this.listName
         }
-        
+
 
         this.list.push(item)
     }
