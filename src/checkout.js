@@ -1,4 +1,3 @@
-import UA from './drivers/analytics'
 import Storage, { CHECKOUT_STEP_PREFIX } from './helpers/storage'
 
 class Checkout {
@@ -62,8 +61,8 @@ class Checkout {
      *
      * @returns {Checkout}
      */
-    purchase(transactionId, affiliation = null, value = null, currency = null, tax = null, shipping = null, items = null) {
-        this.driver.purchase(transactionId, affiliation, value, currency, tax, shipping, items)
+    purchase(transactionId, affiliation = null, value = null, currency = null, tax = null, shipping = null) {
+        this.driver.purchase(transactionId, affiliation, value, currency, tax, shipping, this.items)
         return this
     }
 
