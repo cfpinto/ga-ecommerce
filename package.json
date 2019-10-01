@@ -1,6 +1,6 @@
 {
   "name": "ga-tracker",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "A google analytics e-commerce wrapper for javascript",
   "main": "dist/ga-source.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "browser-sync-webpack-plugin": "2.0.1",
     "cross-env": "^5.2.0",
     "http-server": "^0.11.1",
-    "laravel-mix": "^4.0.16",
+    "laravel-mix": "^5.0.0",
     "node-sass": "^4.12.0",
     "resolve-url-loader": "2.3.1",
     "sass-loader": "7.*",
