@@ -6,7 +6,7 @@ if (process.env.NODE_ENV == 'production') {
         .setPublicPath('dist')
 } else {
     mix.js('src/index.js', 'demo/js/ga-tracker.js')
-        .sass('node_modules/bootstrap/scss/bootstrap.scss', 'demo/css/bootstrap.css')
+        .sass('node_modules/bootstrap/scss/bootstrap.scss', 'css/bootstrap.css')
         .setPublicPath('demo')
         .sourceMaps()
         .version()
