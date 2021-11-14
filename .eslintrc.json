@@ -1,0 +1,11 @@
+{
+    "extends": [
+        "airbnb-base"
+    ],
+    "globals": {
+        "ga": true,
+        "document": true,
+        "window": true,
+        "localStorage": true
+    }
+}
