@@ -8,22 +8,26 @@
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "node_modules/.bin/http-server demo & npm run development -- --watch",
     "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "lint": "./node_modules/.bin/eslint"
   },
   "author": "",
   "license": "GPL-3.0-only",
   "dependencies": {},
   "devDependencies": {
     "bootstrap": "^4.3.1",
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.27.7",
     "browser-sync-webpack-plugin": "^2.3.0",
     "cross-env": "^7.0.3",
-    "http-server": "^0.12.3",
-    "laravel-mix": "^6.0.13",
-    "node-sass": "^5.0.0",
-    "postcss": "^8.1",
-    "resolve-url-loader": "^3.1.2",
-    "sass": "^1.32.8",
-    "sass-loader": "^11.0.1"
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "http-server": "^14.0.0",
+    "laravel-mix": "^6.0.39",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.3.11",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0"
   }
 }

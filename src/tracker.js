@@ -1,73 +1,72 @@
-import Collection from './collection'
-import Product from './product'
-import Cart from './cart'
-import Promotion from './promotion'
-import Checkout from './checkout'
-import Refund from './refund'
-import UA from './drivers/analytics'
+import Collection from './collection';
+import Product from './product';
+import Cart from './cart';
+import Promotion from './promotion';
+import Checkout from './checkout';
+import Refund from './refund';
 
 /**
- * 
+ *
  */
 class GaTracker {
-    /**
-     * 
-     * @param {UA}driver
+  /**
+     *
+     * @param {Gtag}driver
      */
-    constructor(driver) {
-        this.driver = driver
-    }
+  constructor(driver) {
+    this.driver = driver;
+  }
 
-    /**
-     * 
+  /**
+     *
      * @param {Array<Object>}items
      * @returns {Collection}
      */
-    collection(items) {
-        return new Collection(items, this.driver)
-    }
+  collection(items) {
+    return new Collection(items, this.driver);
+  }
 
-    /**
-     * 
+  /**
+     *
      * @param {Object}item
      * @returns {Product}
      */
-    product(item) {
-        return new Product(item, this.driver)
-    }
+  product(item) {
+    return new Product(item, this.driver);
+  }
 
-    /**
-     * 
+  /**
+     *
      * @returns {Cart}
      */
-    cart() {
-        return new Cart(this.driver)
-    }
+  cart() {
+    return new Cart(this.driver);
+  }
 
-    /**
-     * 
+  /**
+     *
      * @param {Object}item
      * @returns {Promotion}
      */
-    promotion(item) {
-        return new Promotion(item, this.driver)
-    }
+  promotion(item) {
+    return new Promotion(item, this.driver);
+  }
 
-    /**
-     * 
+  /**
+     *
      * @returns {Checkout}
      */
-    checkout() {
-        return new Checkout(this.driver)
-    }
+  checkout() {
+    return new Checkout(this.driver);
+  }
 
-    /**
-     * 
+  /**
+     *
      * @returns {Refund}
      */
-    refund() {
-        return new Refund(this.driver)
-    }
+  refund() {
+    return new Refund(this.driver);
+  }
 }
 
-export default GaTracker
+export default GaTracker;

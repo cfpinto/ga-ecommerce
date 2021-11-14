@@ -1,35 +1,31 @@
 class Cart {
-    constructor(driver) {
-        this.driver = driver
-        this.items = []
-    }
+  constructor(driver) {
+    this.driver = driver;
+    this.items = [];
+  }
 
-    add(product) {
-        this.items.push(product)
-        this.driver.addToCart(product.getJson())
-    }
+  add(product) {
+    this.items.push(product);
+    this.driver.addToCart(product.getJson());
+  }
 
-    remove(product) {
-        this.items = this.getItems().filter(item => item.getJson().id !== product.getJson().id)
-        this.driver.removeFromCart(product.getJson())
-    }
+  remove(product) {
+    this.items = this.getItems().filter((item) => item.getJson().id !== product.getJson().id);
+    this.driver.removeFromCart(product.getJson());
+  }
 
-    getItems() {
-        return this.items
-    }
+  getItems() {
+    return this.items;
+  }
 
-    getItemsJson() {
-        return this.items.map(item => item.getJson())
-    }
+  getItemsJson() {
+    return this.items.map((item) => item.getJson());
+  }
 
-    countItems() {
-        let count = 0;
-        this.getItems().map(item => {
-            count += (item.getJson().quantity || 1)
-        })
-
-        return count
-    }
+  countItems() {
+    return this.getItems()
+      .reduce((prev, item) => prev + item.getJson().quantity || 1, 0);
+  }
 }
 
-export default Cart
+export default Cart;
