@@ -11,20 +11,19 @@
   },
   "author": "",
   "license": "GPL-3.0-only",
-  "dependencies": {
-    "dotenv": "^10.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/google.analytics": "0.0.42",
     "@types/jest": "^27.0.2",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
     "bootstrap": "^4.3.1",
+    "dotenv": "^10.0.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
-    "http-server": "^14.0.0",
+    "http-server": "^14.1.0",
     "jest": "^27.3.1",
     "pretty-console-colors": "^2.0.0",
     "ts-jest": "^27.0.7",
