@@ -6,9 +6,10 @@ export const init = ():any => {
   element.async = true;
   document.head.appendChild(element);
   window.dataLayer = window.dataLayer || [];
-  const gtag = function (...args) {
+
+  function gtag(...args) {
     window.dataLayer.push(args);
-  };
+  }
 
   gtag('js', new Date());
 

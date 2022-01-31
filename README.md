@@ -105,7 +105,6 @@ l.impression()
 ```
 
 ### Product
-#### Impression
 ```javascript
 var p = ga.product({
 	"id": "P67890",
@@ -159,7 +158,6 @@ p.impression()
 <button type="button" onclick="c.remove(p)">Remove From Basket</button>
 ```
 ### Promotions (AKA Coupon)
-#### Impression
 ```javascript
 var promo = ga.promotion({
 	"id": "abc123",
