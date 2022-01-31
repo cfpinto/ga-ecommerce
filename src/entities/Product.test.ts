@@ -57,4 +57,11 @@ describe('Product', () => {
 
     expect(t.viewItem).toHaveBeenCalledWith(p);
   });
+
+  it('should allow getters and setters', () => {
+    const prod = new Product({ id: '1' });
+    prod.id = '2';
+    expect(prod.id).toEqual('2');
+    expect(prod.quantity).toEqual(1);
+  });
 });

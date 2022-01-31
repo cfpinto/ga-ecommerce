@@ -15,7 +15,7 @@ export class Collection {
   ) {
     this.list = [];
     this.driver = driver;
-    this.setListName(listName);
+    this.listName = listName;
     itemsJson.forEach((item: Impression) => this.addProduct(new Product(item, this.driver)));
   }
 
@@ -32,7 +32,7 @@ export class Collection {
       ? item : new Product(item, this.driver);
 
     if (!this.listName && item.list) {
-      this.setListName(prod.list);
+      this.listName = prod.list;
     } else {
       prod.list = this.listName;
     }
@@ -41,10 +41,14 @@ export class Collection {
   }
 
   impression() {
-    this.driver.impression(this.getList());
+    this.driver?.impression(this.getList());
   }
 
   setListName(listName: string = null) {
     this.listName = listName;
+  }
+
+  getListName() {
+    return this.listName;
   }
 }

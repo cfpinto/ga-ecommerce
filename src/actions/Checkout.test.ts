@@ -79,11 +79,31 @@ describe('Checkout', () => {
     expect(mockSetKey).toHaveBeenNthCalledWith(3, 'checkout[step][data][localhost]', [p]);
   });
 
-  it('should call driver purchase to track purchase', () => {
-    const transactionId = '1';
-    checkout.purchase({ transactionId });
-    expect((Terminal as jest.Mock).mock.instances[0].purchase).toHaveBeenCalledTimes(1);
-    expect((Terminal as jest.Mock).mock.instances[0].purchase)
-      .toHaveBeenCalledWith(transactionId, null, null, null, null, null, []);
-  });
+  it.each([
+    ['1', null, null, null, null, null],
+    ['1', 'fun', null, null, null, null],
+    ['1', 'fun', 10, null, null, null],
+    ['1', 'fun', 10, 'GBP', null, null],
+    ['1', 'fun', 10, 'GBP', 23, null],
+    ['1', 'fun', 10, 'GBP', 23, 'online'],
+  ])(
+    'should call driver purchase to track purchase with id = %s, affiliation = %s, value = %d, currency = %s, tax = %d, shipping = %s',
+    (transactionId: string, affiliation: string, value: number, currency: string, tax: number, shipping: string) => {
+      checkout.purchase({
+        transactionId, affiliation, value, currency, tax, shipping,
+      });
+      expect((Terminal as jest.Mock).mock.instances[0].purchase).toHaveBeenCalledTimes(1);
+      expect((Terminal as jest.Mock).mock.instances[0].purchase)
+        .toHaveBeenCalledWith(transactionId, affiliation, value, currency, tax, shipping, []);
+    },
+  );
+  // it.each([
+  //   ['1'],
+  //   // ['1', 'fun'],
+  //   // ['1', 'fun', 10],
+  //   // ['1', 'fun', 10, 'GBP'],
+  //   // ['1', 'fun', 10, 'GBP', 23],
+  //   // ['1', 'fun', 10, 'GBP', 23, 'online'],
+  // ])('should call driver purchase to track purchase', (transactionId: string, affiliation: string = null, value: number = null, currency: string = null, tax: number = null, shipping: string = null) => {
+  // });
 });
