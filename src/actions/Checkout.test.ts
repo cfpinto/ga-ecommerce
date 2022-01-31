@@ -88,7 +88,14 @@ describe('Checkout', () => {
     ['1', 'fun', 10, 'GBP', 23, 'online'],
   ])(
     'should call driver purchase to track purchase with id = %s, affiliation = %s, value = %d, currency = %s, tax = %d, shipping = %s',
-    (transactionId: string, affiliation: string, value: number, currency: string, tax: number, shipping: string) => {
+    (
+      transactionId: string,
+      affiliation: string,
+      value: number,
+      currency: string,
+      tax: number,
+      shipping: string,
+    ) => {
       checkout.purchase({
         transactionId, affiliation, value, currency, tax, shipping,
       });
