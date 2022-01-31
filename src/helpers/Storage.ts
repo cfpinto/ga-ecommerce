@@ -1,4 +1,8 @@
-class Storage {
+export class Storage {
+  private readonly storageKey: string;
+
+  private json: any;
+
   constructor() {
     this.storageKey = 'ga-tracker-storage';
     this.init();
@@ -8,7 +12,8 @@ class Storage {
     return JSON.parse(localStorage.getItem(this.storageKey));
   }
 
-  write(json) {
+  write(json: any) {
+    this.json = json;
     localStorage.setItem(this.storageKey, JSON.stringify(json));
 
     return this;
@@ -20,13 +25,11 @@ class Storage {
     return this;
   }
 
-  setKey(key, value) {
-    this.json[key] = value;
-
-    return this.write(this.json);
+  setKey(key: string, value: any) {
+    return this.write({ ...this.json, [key]: value });
   }
 
-  getKey(key, defaultValue = null) {
+  getKey(key: string, defaultValue:any = null): any {
     return this.json[key] || defaultValue;
   }
 }
@@ -35,5 +38,3 @@ export const LIST_NAME_KEY = 'list[name]';
 export const ITEM_LIST_NAME_PREFIX = 'item[list][name]';
 export const ITEM_LIST_POSITION_PREFIX = 'item[list][position]';
 export const CHECKOUT_STEP_PREFIX = 'checkout[step]';
-
-export default Storage;
