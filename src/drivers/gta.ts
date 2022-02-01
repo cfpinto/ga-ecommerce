@@ -1,5 +1,5 @@
+/* istanbul ignore file */
 // @ts-nocheck
-
 export const init = ():any => {
   const element = document.createElement('script');
   element.src = 'https://www.googletagmanager.com/gtag/js?id=UA-98212043-2';

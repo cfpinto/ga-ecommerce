@@ -104,13 +104,4 @@ describe('Checkout', () => {
         .toHaveBeenCalledWith(transactionId, affiliation, value, currency, tax, shipping, []);
     },
   );
-  // it.each([
-  //   ['1'],
-  //   // ['1', 'fun'],
-  //   // ['1', 'fun', 10],
-  //   // ['1', 'fun', 10, 'GBP'],
-  //   // ['1', 'fun', 10, 'GBP', 23],
-  //   // ['1', 'fun', 10, 'GBP', 23, 'online'],
-  // ])('should call driver purchase to track purchase', (transactionId: string, affiliation: string = null, value: number = null, currency: string = null, tax: number = null, shipping: string = null) => {
-  // });
 });

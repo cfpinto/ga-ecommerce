@@ -7,7 +7,7 @@ export class Gtag implements AnalyticsDriver {
 
   private id: string;
 
-  constructor(id: string) {
+  constructor(id: string = null) {
     if (id) {
       this.id = id;
       this.gtag = init();
