@@ -51,4 +51,15 @@ describe('Product', () => {
 
     expect(t.viewPromotion).toHaveBeenCalledWith(p);
   });
+
+  it('should allow getters and setters', () => {
+    const i: Promo = { id: 'ANID' };
+    const p = new Promotion(i);
+
+    expect(p.id).toEqual('ANID');
+
+    p.id = 'ANOTHERID';
+
+    expect(p.id).toEqual('ANOTHERID');
+  });
 });

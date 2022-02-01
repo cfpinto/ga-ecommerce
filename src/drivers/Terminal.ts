@@ -1,3 +1,4 @@
+import 'pretty-console-colors';
 import { AnalyticsDriver, Impression, Promotion } from './Interface';
 
 export class Terminal implements AnalyticsDriver {

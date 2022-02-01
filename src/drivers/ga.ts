@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 // @ts-nocheck
 export const initEc = () => {
   ga('require', 'ec');

@@ -7,7 +7,7 @@ import {
 export class Analytics implements AnalyticsDriver {
   private readonly ga: any;
 
-  constructor(id: string) {
+  constructor(id: string = null) {
     if (id) {
       this.ga = init(id);
     } else {
