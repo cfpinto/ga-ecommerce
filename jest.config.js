@@ -3,4 +3,5 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   moduleFileExtensions: ['js', 'jsx', 'd.ts', 'ts', 'tsx', 'json', 'node'],
+  coverageReporters: ['clover'],
 };

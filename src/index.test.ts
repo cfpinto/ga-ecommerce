@@ -1,10 +1,10 @@
 import gaTracker from './index';
-import { Tracker } from './tracker';
 import { ANALYTICS } from './drivers/Interface';
 import { Terminal } from './drivers/Terminal';
 import { Gtag } from './drivers/Gtag';
 import { init, initEc } from './drivers/ga';
 import { Analytics } from './drivers/Analytics';
+import { Tracker } from './Tracker';
 
 jest.mock('./drivers/ga');
 jest.mock('./drivers/gta');
