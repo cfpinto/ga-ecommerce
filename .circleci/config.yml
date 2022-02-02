@@ -16,7 +16,7 @@ jobs:
           command: npm run test -- --coverage
           name: Run tests
       - run:
-          command: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage-xml/index.xml
+          command: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage/clover.xml
           name: Codacy coverage
 workflows:
   on_commit:
